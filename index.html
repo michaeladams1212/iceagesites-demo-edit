@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="description" content="This business does not exist.">
+<title>Example Test Gardens, Testville</title>
+<link rel="preload" href="fonts/young-serif-400.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Young Serif";src:url(fonts/young-serif-400.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Hanken Grotesk";src:url(fonts/hanken-grotesk-var.woff2) format("woff2");font-weight:100 900;font-display:swap}
+:root{--ink:#17211c;--page:#f4f5f0;--stone:#e3e6dc;--line:#b5beb1;--hedge:#1e3a2e;--moss:#4f6a4c;--ochre:#d8b45a;
+--display:"Young Serif",Georgia,serif;--body:"Hanken Grotesk","Segoe UI",system-ui,sans-serif;--edge:clamp(1.25rem,5vw,5rem);--gap:clamp(5rem,11vw,10rem)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+body{margin:0;background:var(--page);color:var(--ink);font:400 1.125rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-underline-offset:.2em}
+:focus-visible{outline:3px solid var(--ochre);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance}
+p{margin:0}
+.skip{position:absolute;left:-9999px;top:0;background:#fff;padding:.75rem 1rem;z-index:30}
+.skip:focus{left:.5rem;top:.5rem}
+.notice{background:var(--ink);color:#fff;padding:.55rem var(--edge);font-size:.95rem;line-height:1.4}
+.bar{position:absolute;z-index:5;left:0;right:0;display:flex;justify-content:space-between;align-items:center;gap:1rem 2rem;padding:1.5rem var(--edge);color:#fff}
+.name{font:400 1.45rem/1.1 var(--display);text-decoration:none}
+.bar ul{display:flex;align-items:center;gap:2.25rem;margin:0;padding:0;list-style:none;font-size:1.0625rem}
+.bar a:not(.name){text-decoration:none;display:inline-block;padding:.6rem 0}
+.bar a:not(.name):hover{text-decoration:underline}
+.hero{position:relative;overflow:hidden;background:var(--hedge);color:#fff;min-height:min(100svh,56rem);display:flex;flex-direction:column;justify-content:flex-end;padding:9rem var(--edge) 2.25rem}
+.hero .art{position:absolute;top:-6%;right:-14%;width:min(82%,62rem);height:auto;color:#b9cdb6;opacity:.42;animation:settle 1.6s ease-out both}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.6}
+@keyframes settle{from{opacity:0;transform:translateY(12px)}}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,var(--hedge) 0,transparent 18%),linear-gradient(90deg,var(--hedge) 42%,transparent 88%)}
+.hero>div,.hero>ul,.hero>small{position:relative;z-index:2}
+h1{font-size:clamp(3.1rem,8.6vw,7.75rem);line-height:1;letter-spacing:-.015em;max-width:11em}
+.lede{font-size:clamp(1.2rem,1.8vw,1.5rem);line-height:1.45;max-width:30em;margin-top:1.75rem}
+.actions{display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:center;margin-top:2.5rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:3.5rem;padding:.9rem 2.1rem;background:var(--ochre);color:var(--ink);font-weight:600;text-decoration:none;border:0;border-radius:2px;font-size:1.125rem;cursor:pointer;transition:background-color .2s}
+.btn:hover{background:#fff}
+.trust{display:flex;flex-wrap:wrap;gap:.5rem 3.5rem;list-style:none;margin:4.5rem 0 0;padding:1.25rem 0 0;border-top:1px solid rgba(255,255,255,.28)}
+.hero small{display:block;margin-top:1rem;font-size:.9rem;opacity:.85}
+.band{padding:var(--gap) var(--edge)}
+h2{font-size:clamp(2.4rem,5.2vw,4.5rem);line-height:1.06}
+.split{display:grid;gap:3rem}
+.rows{margin:0;padding:0;list-style:none}
+.rows li{padding:2.25rem 0;border-top:1px solid var(--line)}
+.rows li:last-child{border-bottom:1px solid var(--line)}
+.rows h3{font-size:clamp(1.75rem,3vw,2.5rem);line-height:1.15}
+.rows p{margin-top:.6rem;max-width:32em}
+#photos{background:var(--stone);padding-bottom:calc(var(--gap)*.8)}
+.gallery{display:grid;gap:clamp(1rem,2.2vw,2rem);margin-top:clamp(2.5rem,5vw,4.5rem)}
+figure{margin:0}
+.frame{background:var(--page);color:var(--moss);overflow:hidden;aspect-ratio:4/3}
+.frame .art,.frame img{display:block;width:100%;height:100%;object-fit:cover}
+figcaption{margin-top:.8rem;font-size:1rem;line-height:1.4}
+figcaption b{font-weight:600}
+figcaption span{display:block;opacity:.8;font-size:.95rem}
+.steps{display:grid;gap:2.5rem;margin:clamp(2.5rem,5vw,4rem) 0 0;padding:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;border-top:1px solid var(--line);padding-top:1.25rem}
+.steps li::before{content:counter(s);display:block;font:400 2.5rem/1 var(--display);color:var(--moss);margin-bottom:1rem}
+.steps h3{font-size:1.6rem;line-height:1.2}
+.steps p{margin-top:.5rem}
+.small{margin-top:2rem;font-size:1rem;opacity:.85}
+#reviews{background:var(--hedge);color:#fff}
+#reviews p{margin-top:1.5rem;font-size:1.25rem;max-width:32em}
+#quote{display:grid;gap:3rem}
+#quote .intro{margin-top:1.25rem;max-width:26em;font-size:1.25rem;line-height:1.45}
+.card{background:#fff;padding:clamp(1.5rem,4vw,3.25rem)}
+label{display:block;margin-top:1.4rem;font-weight:600}
+form label:first-of-type{margin-top:0}
+input,select,textarea{display:block;width:100%;margin-top:.4rem;padding:.8rem .9rem;font:1.0625rem/1.4 var(--body);color:var(--ink);background:var(--page);border:1px solid var(--moss);border-radius:2px}
+textarea{min-height:8.5rem;resize:vertical}
+form .btn{width:100%;margin-top:2rem}
+.status{margin-top:1rem;font-weight:600}
+.trap{position:absolute;left:-9999px}
+footer{background:var(--ink);color:#fff;padding:3.5rem var(--edge) 6.5rem;font-size:1rem}
+footer p{margin-bottom:.5rem;max-width:50em}
+.stick{position:fixed;z-index:20;left:0;right:0;bottom:0;padding:.65rem var(--edge);background:var(--page);border-top:1px solid var(--line);transition:transform .25s ease}
+.stick .btn{width:100%}
+.stick.away{transform:translateY(120%);visibility:hidden}
+@media(max-width:640px){.hero::before{background:linear-gradient(0deg,var(--hedge) 58%,transparent 92%)}.bar ul li:not(:last-child){display:none}.hero{padding-top:8rem}.hero .art{right:-40%;top:2rem;width:130%}}
+@media(min-width:800px){
+.split{grid-template-columns:5fr 7fr;gap:4rem}
+.split>h2{position:sticky;top:2.5rem;align-self:start}
+.gallery{grid-template-columns:7fr 5fr}
+.gallery figure:first-child{grid-row:span 2}
+.gallery figure:first-child .frame{aspect-ratio:auto;height:calc(100% - 4.25rem)}
+.steps{grid-template-columns:repeat(3,1fr);gap:3rem}
+#quote{grid-template-columns:5fr 7fr;gap:4rem}
+.stick{display:none}
+footer{padding-bottom:3.5rem}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero .art{animation:none}.btn,.stick{transition:none}}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="plan" viewBox="0 0 800 800"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M30 30H770V770H30Z" stroke-width="2.4"/><path d="M60 470H500V740H60Z" stroke-width="2"/><path d="M60 470H500M64 470V500M169 470V500M239 470V500M309 470V500M379 470V500M484 470V500M60 500H500M101 500V530M171 500V530M241 500V530M311 500V530M381 500V530M486 500V530M60 530H500M69 530V560M174 530V560M244 530V560M314 530V560M419 530V560M489 530V560M60 560H500M100 560V590M205 560V590M310 560V590M415 560V590M60 590H500M64 590V620M134 590V620M239 590V620M309 590V620M379 590V620M449 590V620M60 620H500M96 620V650M166 620V650M236 620V650M341 620V650M411 620V650M481 620V650M60 650H500M62 650V680M132 650V680M202 650V680M272 650V680M342 650V680M447 650V680M60 680H500M100 680V710M205 680V710M275 680V710M380 680V710M450 680V710M60 710H500M67 710V740M137 710V740M207 710V740M277 710V740M347 710V740M452 710V740M60 740H500" opacity=".75"/><rect x="300" y="90" width="430" height="330" rx="46" stroke-width="2"/><path d="M320 96V414M348 96V414M376 96V414M404 96V414M432 96V414M460 96V414M488 96V414M516 96V414M544 96V414M572 96V414M600 96V414M628 96V414M656 96V414M684 96V414M712 96V414" opacity=".35"/><g opacity=".9"><rect x="455" y="451" width="30" height="18" rx="4" transform="rotate(-0 470 460)"/><rect x="470" y="447" width="30" height="18" rx="4" transform="rotate(-5 485 456)"/><rect x="485" y="434" width="30" height="18" rx="4" transform="rotate(-10 500 443)"/><rect x="500" y="414" width="30" height="18" rx="4" transform="rotate(-15 515 422)"/><rect x="515" y="384" width="30" height="18" rx="4" transform="rotate(-20 530 393)"/><rect x="530" y="347" width="30" height="18" rx="4" transform="rotate(-25 545 356)"/><rect x="545" y="301" width="30" height="18" rx="4" transform="rotate(-30 560 310)"/></g><g opacity=".8"><circle cx="70" cy="131" r="25"/><path d="M70 131L95.0 131.0"/><path d="M70 131L82.5 152.7"/><path d="M70 131L57.5 152.7"/><path d="M70 131L45.0 131.0"/><path d="M70 131L57.5 109.3"/><path d="M70 131L82.5 109.3"/><circle cx="86" cy="302" r="20"/><path d="M86 302L106.0 302.0"/><path d="M86 302L100.1 316.1"/><path d="M86 302L86.0 322.0"/><path d="M86 302L71.9 316.1"/><path d="M86 302L66.0 302.0"/><path d="M86 302L71.9 287.9"/><path d="M86 302L86.0 282.0"/><path d="M86 302L100.1 287.9"/><circle cx="114" cy="101" r="19"/><path d="M114 101L133.0 101.0"/><path d="M114 101L123.5 117.5"/><path d="M114 101L104.5 117.5"/><path d="M114 101L95.0 101.0"/><path d="M114 101L104.5 84.5"/><path d="M114 101L123.5 84.5"/><circle cx="130" cy="242" r="16"/><path d="M130 242L146.0 242.0"/><path d="M130 242L141.3 253.3"/><path d="M130 242L130.0 258.0"/><path d="M130 242L118.7 253.3"/><path d="M130 242L114.0 242.0"/><path d="M130 242L118.7 230.7"/><path d="M130 242L130.0 226.0"/><path d="M130 242L141.3 230.7"/><circle cx="158" cy="145" r="21"/><path d="M158 145L179.0 145.0"/><path d="M158 145L168.5 163.2"/><path d="M158 145L147.5 163.2"/><path d="M158 145L137.0 145.0"/><path d="M158 145L147.5 126.8"/><path d="M158 145L168.5 126.8"/><circle cx="174" cy="287" r="19"/><path d="M174 287L193.0 287.0"/><path d="M174 287L187.4 300.4"/><path d="M174 287L174.0 306.0"/><path d="M174 287L160.6 300.4"/><path d="M174 287L155.0 287.0"/><path d="M174 287L160.6 273.6"/><path d="M174 287L174.0 268.0"/><path d="M174 287L187.4 273.6"/><circle cx="202" cy="79" r="17"/><path d="M202 79L219.0 79.0"/><path d="M202 79L210.5 93.7"/><path d="M202 79L193.5 93.7"/><path d="M202 79L185.0 79.0"/><path d="M202 79L193.5 64.3"/><path d="M202 79L210.5 64.3"/><circle cx="218" cy="196" r="28"/><path d="M218 196L246.0 196.0"/><path d="M218 196L237.8 215.8"/><path d="M218 196L218.0 224.0"/><path d="M218 196L198.2 215.8"/><path d="M218 196L190.0 196.0"/><path d="M218 196L198.2 176.2"/><path d="M218 196L218.0 168.0"/><path d="M218 196L237.8 176.2"/><circle cx="246" cy="67" r="23"/><path d="M246 67L269.0 67.0"/><path d="M246 67L257.5 86.9"/><path d="M246 67L234.5 86.9"/><path d="M246 67L223.0 67.0"/><path d="M246 67L234.5 47.1"/><path d="M246 67L257.5 47.1"/><circle cx="262" cy="237" r="30"/><path d="M262 237L292.0 237.0"/><path d="M262 237L283.2 258.2"/><path d="M262 237L262.0 267.0"/><path d="M262 237L240.8 258.2"/><path d="M262 237L232.0 237.0"/><path d="M262 237L240.8 215.8"/><path d="M262 237L262.0 207.0"/><path d="M262 237L283.2 215.8"/><circle cx="570" cy="486" r="28"/><path d="M570 486L598.0 486.0"/><path d="M570 486L589.8 505.8"/><path d="M570 486L570.0 514.0"/><path d="M570 486L550.2 505.8"/><path d="M570 486L542.0 486.0"/><path d="M570 486L550.2 466.2"/><path d="M570 486L570.0 458.0"/><path d="M570 486L589.8 466.2"/><circle cx="645" cy="548" r="16"/><path d="M645 548L661.0 548.0"/><path d="M645 548L656.3 559.3"/><path d="M645 548L645.0 564.0"/><path d="M645 548L633.7 559.3"/><path d="M645 548L629.0 548.0"/><path d="M645 548L633.7 536.7"/><path d="M645 548L645.0 532.0"/><path d="M645 548L656.3 536.7"/><circle cx="727" cy="599" r="27"/><path d="M727 599L754.0 599.0"/><path d="M727 599L746.1 618.1"/><path d="M727 599L727.0 626.0"/><path d="M727 599L707.9 618.1"/><path d="M727 599L700.0 599.0"/><path d="M727 599L707.9 579.9"/><path d="M727 599L727.0 572.0"/><path d="M727 599L746.1 579.9"/><circle cx="706" cy="642" r="33"/><path d="M706 642L739.0 642.0"/><path d="M706 642L729.3 665.3"/><path d="M706 642L706.0 675.0"/><path d="M706 642L682.7 665.3"/><path d="M706 642L673.0 642.0"/><path d="M706 642L682.7 618.7"/><path d="M706 642L706.0 609.0"/><path d="M706 642L729.3 618.7"/><circle cx="705" cy="696" r="18"/><path d="M705 696L723.0 696.0"/><path d="M705 696L717.7 708.7"/><path d="M705 696L705.0 714.0"/><path d="M705 696L692.3 708.7"/><path d="M705 696L687.0 696.0"/><path d="M705 696L692.3 683.3"/><path d="M705 696L705.0 678.0"/><path d="M705 696L717.7 683.3"/></g><circle cx="610" cy="500" r="72"/><path d="M610 500L682.0 500.0"/><path d="M610 500L674.9 531.2"/><path d="M610 500L654.9 556.3"/><path d="M610 500L626.0 570.2"/><path d="M610 500L594.0 570.2"/><path d="M610 500L565.1 556.3"/><path d="M610 500L545.1 531.2"/><path d="M610 500L538.0 500.0"/><path d="M610 500L545.1 468.8"/><path d="M610 500L565.1 443.7"/><path d="M610 500L594.0 429.8"/><path d="M610 500L626.0 429.8"/><path d="M610 500L654.9 443.7"/><path d="M610 500L674.9 468.8"/><circle cx="150" cy="370" r="62"/><path d="M150 370L212.0 370.0"/><path d="M150 370L203.7 401.0"/><path d="M150 370L181.0 423.7"/><path d="M150 370L150.0 432.0"/><path d="M150 370L119.0 423.7"/><path d="M150 370L96.3 401.0"/><path d="M150 370L88.0 370.0"/><path d="M150 370L96.3 339.0"/><path d="M150 370L119.0 316.3"/><path d="M150 370L150.0 308.0"/><path d="M150 370L181.0 316.3"/><path d="M150 370L203.7 339.0"/></g></symbol></svg>
+<aside aria-label="About this page"><p class="notice">This is a demo only, made independently of Example Test Gardens Ltd. It is not their official website and does not send enquiries.</p></aside>
+<header class="bar">
+<a class="name" href="#top">Example Test Gardens</a>
+<nav aria-label="Main"><ul><li><a href="#services">Services</a></li><li><a href="#photos">Our work</a></li><li><a href="#quote">Get a quote</a></li></ul></nav>
+</header>
+<main id="main">
+<div class="hero">
+<svg class="art " viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><use href="#plan" width="800" height="800"/></svg>
+<div>
+<h1>A throwaway site for testing forms.</h1>
+<p class="lede">This business does not exist.</p>
+<div class="actions"><a class="btn" href="#quote">Get a quote</a></div>
+</div>
+<small>Illustrative garden plan, not a real project.</small>
+</div>
+<section class="band split" id="services"><h2>What we do</h2><ul class="rows"><li><h3>Test service</h3><p>A service used only for testing.</p></li></ul></section>
+<section class="band" id="photos"><h2>Our work</h2><div class="gallery"><figure><div class="frame"><img src="/media/starter-test-image.png" alt="Test service" loading="lazy"></div><figcaption><b>Test service</b><span>Illustrative image, not a real project</span></figcaption></figure></div></section>
+<section class="band" id="hours"><h2>Opening times</h2><dl class="hours"><div><dt>Monday to Friday</dt><dd>7am to 6pm</dd></div><div><dt>Saturday and Sunday</dt><dd>Closed</dd></div></dl><p>Test hours only.</p></section>
+<section class="band" id="quote"><div><h2>Get a quote</h2><p class="intro">Tell us a little about the job.</p></div><div class="card"><p>Or call <a href="tel:01632960123">01632 960123</a>.</p><form id="demo-form"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required maxlength="100"><label for="f-email">Your email</label><input id="f-email" name="email" type="email" autocomplete="email" required><label for="f-service">What do you need?</label><select id="f-service" name="service" required><option value="">Choose one</option><option>Test service</option></select><label for="f-message">Tell us about the job</label><textarea id="f-message" name="message" required></textarea><button class="btn" type="submit">Try the form (nothing is sent)</button><p class="status" role="status" id="status"></p></form></div></section>
+</main>
+<footer><p>Example Test Gardens Ltd, company number 00000000.</p><p>Independent concept for Example Test Gardens Ltd, not commissioned or endorsed by the business. To contact the business, use <a href="https://example.com/" rel="noopener noreferrer">their official website</a>.</p></footer>
+<nav class="stick" id="stick" aria-label="Quick action"><a class="btn" href="#quote">Get a quote</a></nav>
+<script>(function(){var s=document.getElementById('stick'),v=[];if(!('IntersectionObserver' in window))return;var o=new IntersectionObserver(function(es){es.forEach(function(e){var i=v.indexOf(e.target);if(e.isIntersecting&&i<0)v.push(e.target);if(!e.isIntersecting&&i>=0)v.splice(i,1);});s.classList.toggle('away',v.length>0);},{threshold:.05});o.observe(document.getElementById('quote'));o.observe(document.querySelector('.actions'));})();</script>
+<script>document.getElementById('demo-form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('status').textContent='Form checked. Nothing was sent, because this is a demo.';});</script>
+<script>fetch('clients/testco.json',{cache:'no-store'}).then(function(r){return r.json();}).then(function(d){var a=document.querySelector('a[href^="tel:"]');if(a&&d.phone){a.textContent=d.phone;a.href='tel:'+d.phone.replace(/ /g,'');}var l=document.querySelector('.hours');if(l&&d.opening_hours){l.innerHTML='';d.opening_hours.forEach(function(h){var w=document.createElement('div'),t=document.createElement('dt'),v=document.createElement('dd');t.textContent=h.day;v.textContent=h.hours;w.appendChild(t);w.appendChild(v);l.appendChild(w);});}}).catch(function(){});</script>
+</body>
+</html>

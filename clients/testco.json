@@ -1,0 +1,46 @@
+{
+  "id": "testco",
+  "manifest": "testco",
+  "business": "Example Test Gardens Ltd",
+  "short_name": "Example Test Gardens",
+  "company_number": "00000000",
+  "location": "Testville",
+  "official_site": "https://example.com/",
+  "headline": "A throwaway site for testing forms.",
+  "intro": "This business does not exist.",
+  "services": [
+    {
+      "name": "Test service",
+      "description": "A service used only for testing."
+    }
+  ],
+  "photos": [
+    {
+      "label": "Test service",
+      "image": "/media/starter-test-image.png",
+      "illustrative": true
+    }
+  ],
+  "palette": {
+    "ink": "#17211c",
+    "page": "#f4f5f0",
+    "stone": "#e3e6dc",
+    "line": "#b5beb1",
+    "hedge": "#1e3a2e",
+    "moss": "#4f6a4c",
+    "ochre": "#d8b45a"
+  },
+  "_notes": "Fictional client for form and editor tests. 01632 960000 is in the Ofcom range reserved for fiction. Never use on a real site.",
+  "phone": "01632 960123",
+  "opening_hours": [
+    {
+      "day": "Monday to Friday",
+      "hours": "7am to 6pm"
+    },
+    {
+      "day": "Saturday and Sunday",
+      "hours": "Closed"
+    }
+  ],
+  "opening_note": "Test hours only."
+}

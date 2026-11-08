@@ -1,0 +1,103 @@
+# Pages CMS config for the FICTIONAL client testco. Not yet tested on a live site.
+# Holds no secrets. Pages CMS keeps logins and invited emails in its own system.
+
+media:
+  # build_site.py copies clients/media/testco to /media in the published site.
+  input: clients/media/testco
+  output: /media
+  rename: safe
+  extensions: [jpg, jpeg, png, webp]
+
+settings:
+  content:
+    # Must stay true. The default rewrites the file from the fields below only,
+    # which would delete id, manifest, palette and the other hidden values.
+    merge: true
+
+content:
+  - name: site
+    label: Website details
+    type: file
+    path: clients/testco.json
+    format: json
+    fields:
+      - name: phone
+        label: Phone number
+        type: string
+        required: true
+        description: Test site, so only use fictional numbers from 01632 960000 to 01632 960999.
+        options:
+          maxlength: 30
+      - name: opening_hours
+        label: Opening times
+        type: object
+        # Same two rows as the data file. The day names are locked.
+        list:
+          min: 2
+          max: 2
+        fields:
+          - name: day
+            label: Day
+            type: string
+            readonly: true
+          - name: hours
+            label: Hours
+            type: string
+            required: true
+            description: For example 8am to 5pm, or Closed.
+            options:
+              maxlength: 40
+      - name: opening_note
+        label: Note about opening times (optional)
+        type: string
+        options:
+          maxlength: 100
+      - name: headline
+        label: Main headline
+        type: string
+        required: true
+        options:
+          maxlength: 80
+      - name: intro
+        label: Short introduction
+        type: text
+        required: true
+        options:
+          maxlength: 200
+      - name: services
+        label: Services
+        type: object
+        # Names are locked because build_site.py stops if a service name is
+        # not in the QA manifest.
+        list:
+          min: 1
+          max: 1
+        fields:
+          - name: name
+            label: Service name (ask us to change this)
+            type: string
+            readonly: true
+          - name: description
+            label: Description
+            type: text
+            required: true
+      - name: photos
+        label: Photo
+        type: object
+        list:
+          min: 1
+          max: 1
+        fields:
+          - name: label
+            label: What this photo shows
+            type: string
+            readonly: true
+          - name: image
+            label: Photo
+            type: image
+            description: Only use a photo you took or have permission to use.
+          # Keeps the "Illustrative image" caption. Without it build_site.py
+          # stops, because the manifest does not confirm image rights.
+          - name: illustrative
+            type: boolean
+            hidden: true
